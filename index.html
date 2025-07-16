@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Five Star Gym</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class='grid grid-cols-[100vw] auto-rows-auto w-screen gap-[5vh] bg-white dark:bg-black dark:text-white overflow-x-hidden'>
+    <div id="menu" class="fixed top-5 left-2 sm:top-12 sm:left-10 z-1000000 animate-bounce">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            class="size-[10%]">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+        </svg>
+    </div>
+    <div id="navbar"
+        class="fixed top-10 left-2 sm:top-17 sm:left-10 bg-black dark:bg-gray-200 dark:text-black grid sm:grid-cols-[10vw_10vw] grid-cols-[30vw_30vw] grid-rows-[10vh_10vh] justify-items-center items-center rounded-4xl opacity-70 text-white hidden z-1000000">
+        <a href="https://wa.me/923107488488?text=Hello" target="_blank" id="achievements"
+            class="col-start-1 col-end-2 row-start-1 row-end-2 transition delay-150 duration-300 ease-in-out hover:scale-130 size-[50%]">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor" class="size-full">
+                <path
+                    d="M380.9 97.1C339-3.5 239.5-24.5 148.3 17.4 57.5 58.9 20.5 166.6 61.7 257.8L0 480l228.7-61.7c91.2 41.2 198.9 4.2 240.4-86.6 41.8-91.2 20.8-190.7-88.2-234.6zm-14.1 211.1c-6.5 18.3-32.8 35.1-45.4 37.4-11.7 2.2-26.6 3.1-84.6-17.6-70.6-24.5-116.1-102-119.6-106.7-3.4-4.7-28.6-38.1-28.6-72.7 0-34.6 18.3-51.3 24.8-58.4 6.5-7.1 14.2-8.9 18.9-8.9s9.4 .1 13.5 .2c4.3 .1 10.2-.6 15.4 11.7 6.2 14.6 21.1 50.3 22.9 54 1.8 3.6 3.6 8.5 1.1 13.3s-13.1 19.3-18.1 26c-4.7 5.8-9.6 12-4.1 23.3 5.5 11.3 24.5 40.6 52.8 65.7 36.4 32.2 67.1 42.2 78.3 46.7 11.2 4.4 17.7 3.6 24.3-2.2 6.6-5.8 27.9-32.3 35.4-43.3 7.3-10.6 14.6-8.9 24.3-5.3 9.6 3.6 60.5 28.5 61.6 33.6z" />
+            </svg>
+        </a>
+        <a href="" target="_blank" id="timings"
+            class="col-start-2 col-end-3 row-start-1 row-end-2 transition delay-150 duration-300 ease-in-out hover:scale-130 size-[50%]">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" fill="currentColor" class="size-full">
+                <path
+                    d="M279.14 288l14.22-92.66h-88.91V127.47c0-25.35 12.42-50.06 52.24-50.06H293V6.26S259.5 0 225.36 0c-73.14 0-121 44.38-121 124.72V195.3H22.89V288H104.4V512h100.2V288z" />
+            </svg>
+        </a>
+        <a href="" target="_blank" id="location"
+            class="col-start-1 col-end-2 row-start-2 row-end-3 transition delay-150 duration-300 ease-in-out hover:scale-130 size-[50%]">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor" class="size-full">
+                <path
+                    d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9S160.5 370.9 224.1 370.9 339 319.6 339 255.9 287.7 141 224.1 141zm0 186.6c-39.6 0-71.7-32.1-71.7-71.7s32.1-71.7 71.7-71.7 71.7 32.1 71.7 71.7-32.1 71.7-71.7 71.7zm146.4-194.3c0 14.9-12 26.9-26.9 26.9s-26.9-12-26.9-26.9 12-26.9 26.9-26.9 26.9 12 26.9 26.9zm76.1 27.2c-.1-35.3-9.4-66.7-34.1-91.4S387.4 0 352.1 0H95.9C60.6 0 29.2 9.4 4.5 34.1S-1 76.7 0 112V400c.1 35.3 9.4 66.7 34.1 91.4S60.6 512 95.9 512H352c35.3-.1 66.7-9.4 91.4-34.1S512 435.4 512 400V112zM466.6 400c0 25.1-7.6 44.3-21.8 58.5s-33.4 21.8-58.5 21.8H95.9c-25.1 0-44.3-7.6-58.5-21.8S15.6 425.1 15.6 400V112c0-25.1 7.6-44.3 21.8-58.5S70.8 31.6 95.9 31.6H352c25.1 0 44.3 7.6 58.5 21.8s21.8 33.4 21.8 58.5z" />
+            </svg>
+        </a>
+        <a href="" target="_blank" id="contact-us"
+            class="col-start-2 col-end-3 row-start-2 row-end-3 transition delay-150 duration-300 ease-in-out hover:scale-130 size-[50%]">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor" class="size-full">
+                <path
+                    d="M448 209.9v94.5c-54.5-2.2-105.8-23.9-145.5-60.3v138.9c0 74.2-60.2 134.4-134.4 134.4S33.7 456.2 33.7 382s60.2-134.4 134.4-134.4c10.8 0 21.4 1.3 31.4 3.8v96.4c-7.7-4.1-16.4-6.3-25.4-6.3-30.6 0-55.4 24.8-55.4 55.4s24.8 55.4 55.4 55.4 55.4-24.8 55.4-55.4V0h94.4c0 63.1 51.3 114.4 114.4 114.4z" />
+            </svg>
+
+        </a>
+    </div>
+
+    <header class='flex flex-row lg:justify-around max-lg:justify-center items-center'>
+        <img src="./gym_logo.png" alt="GYM Logo" class="sm:size-30 size-16">
+        <h1 class='font-serif font-black sm:text-2xl max-sm:text-xs'>Welcome To Five Star Power Gym</h1>
+    </header>
+    <main class="w-[95vw] shadow-xl shadow-black rounded-t-full m-auto flex flex-col items-center gap-5 dark:bg-gray-950">
+        <img src="./1_img.jpg" alt="Gym Images" id="carousel"
+            class="aspect-16/9 rounded-full w-full object-cover transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">
+        <h2
+            class="sm:text-4xl text-2xl underline font-black uppercase font-sans text-center transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">
+            "This is you
+            transformation zone"</h2>
+        <div class="transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">
+            <h4 class="sm:text-xl text-lg underline font-bold uppercase font-sans text-center">"Where power meets
+                purpose.</h4>
+            <h4 class="sm:text-xl text-lg underline font-bold uppercase font-sans text-center">Designed for people like
+                you"</h4>
+        </div>
+        <p
+            class="italic text-center font-serif transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">
+            Premium gym where results speak louder then promise</p>
+    </main>
+
+    <article id="why-us"
+        class="sm:w-2xl w-3xs justify-self-center flex flex-row flex-wrap shadow-xl shadow-black justify-between items-center transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 dark:bg-gray-950">
+        <h1 class=" bg-black text-white px-[10%] py-[4%] rounded-r-full font-serif font-bold">Why Us</h1>
+        <div class="p-[4%]">
+            <ul class="list-disc list-inside font-serif">
+                <li>Elite trainer</li>
+                <li>Personalized fitness plan</li>
+                <li>14 days progress check -ins</li>
+                <li>24/7 whatsapp support</li>
+                <li>Diet & Recovery Guidance</li>
+            </ul>
+        </div>
+        <div class="w-full flex flex-row justify-center">
+            <h3 class="bg-black text-white italic rounded-t-full p-[2%] text-center">"Not just a gym_A system that
+                works"</h3>
+        </div>
+    </article>
+
+    <article id="testimonials" class="w-screen h-auto flex flex-row justify-between">
+        <div id="before" class="w-[30%] p-[2%] border-1 border-black rounded-r-2xl relative">
+            <div id="before-tag"
+                class="absolute -right-4 -top-4 bg-black text-white p-[10px] rounded-4xl font-serif font-bold transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 dark:bg-gray-950">
+                <h6>Before</h6>
+            </div>
+            <img src="./before-after/1_img_b.jpg" alt="before-workout" id="before-img"
+                class="aspect-[4/3] rounded-4xl object-cover">
+            <p id="before-desc" class="text-center font-serif">Persistent fatigue and low stamina were common due to a
+                sedentary lifestyle and poor nutrition. Daily activities felt exhausting, and without proper guidance,
+                improving physical health seemed overwhelming.</p>
+        </div>
+
+        <div id="after" class="w-[30%] p-[2%] border-1 border-black rounded-l-2xl relative z-10000">
+            <div id="after-tag"
+                class="absolute -left-4 -top-4 bg-black text-white p-[10px] rounded-4xl font-serif font-bold transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 dark:bg-gray-950">
+                <h6>After</h6>
+            </div>
+            <img src="./before-after/1_img_a.jpg" alt="after-workout" id="after-img"
+                class="aspect-[4/3] rounded-4xl object-cover">
+            <p id="after-desc" class="text-center font-serif">With a structured workout and nutrition plan at Five Star
+                Power Gym, significant body fat reduction and lean muscle gain were achieved. Energy levels increased,
+                and overall strength and wellness improved dramatically.</p>
+        </div>
+    </article>
+
+    <article id="pricing"
+        class="flex flex-row items-center transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 dark:bg-gray-950">
+        <div class="w-[70vw] h-[80vh] shadow-xl shadow-black rounded-r-4xl">
+            <h3
+                class="bg-black text-white sm:w-[40%] w-[100%] px-[10%] py-[4%] text-center rounded-r-full font-serif font-bold">
+                Our
+                Memberships & Plans</h3>
+            <div id="plans" class="w-full h-[60%] flex flex-col flex-wrap justify-between content-center mt-[5%]">
+                <button type="button" id="monthly_plan"
+                    class="bg-black p-[2%] text-white rounded-4xl hover:shadow-black hover:shadow-xl transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">Monthly
+                    Plan</button>
+                <button type="button" id="3_months_plan"
+                    class="bg-black p-[2%] text-white rounded-4xl hover:shadow-black hover:shadow-xl transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">3
+                    Months
+                    Plan</button>
+                <button type="button" id="6_months_plan"
+                    class="bg-black p-[2%] text-white rounded-4xl hover:shadow-black hover:shadow-xl transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">6
+                    Months
+                    Plan</button>
+                <button type="button" id="yearly_plan"
+                    class="bg-black p-[2%] text-white rounded-4xl hover:shadow-black hover:shadow-xl transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">Yearly
+                    Plan</button>
+            </div>
+        </div>
+        <div class="m-auto">
+            <p id="pricing_details" class="font-bold font-serif"></p>
+        </div>
+    </article>
+
+    <article id="timings-details"
+        class="sm:w-[70vw] max-sm:w-screen h-[70vh] justify-self-end shadow-xl shadow-black sm:rounded-l-4xl max-sm:rounded-4xl transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 dark:bg-gray-950">
+        <div class="w-full flex flex-row justify-end">
+            <h3
+                class="bg-black text-white sm:w-[40%] max-sm:w-[100%] px-[10%] py-[4%] text-center sm:rounded-l-full max-sm:rounded-4xl font-serif font-bold">
+                Timmings
+            </h3>
+        </div>
+        <div class="mt-[5%] w-full h-[60%] flex flex-row justify-center items-center">
+            <table class="table-auto border-separate border border-black border-spacing-2 font-serif sm:text-base max-sm:text-xs">
+                <thead>
+                    <tr>
+                        <th class="border-2 border-black p-[2%] text-center hover:bg-gray-500">Catagory</th>
+                        <th class="border-2 border-black p-[2%] text-center hover:bg-gray-500">From</th>
+                        <th class="border-2 border-black p-[2%] text-center hover:bg-gray-500">To</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="border border-black p-[1%] text-center hover:bg-gray-200 dark:hover:bg-gray-700">Boys</td>
+                        <td class="border border-black p-[1%] text-center hover:bg-gray-200 dark:hover:bg-gray-700">6:00 AM</td>
+                        <td class="border border-black p-[1%] text-center hover:bg-gray-200 dark:hover:bg-gray-700">7:30 AM</td>
+                    </tr>
+
+                    <tr>
+                        <td class="border border-black p-[1%] text-center hover:bg-gray-200 dark:hover:bg-gray-700">Ladies</td>
+                        <td class="border border-black p-[1%] text-center hover:bg-gray-200 dark:hover:bg-gray-700">8:00 AM</td>
+                        <td class="border border-black p-[1%] text-center hover:bg-gray-200 dark:hover:bg-gray-700">2:00 PM</td>
+                    </tr>
+
+                    <tr>
+                        <td class="border border-black p-[1%] text-center hover:bg-gray-200 dark:hover:bg-gray-700">Special Training (Personal
+                            & Athelete Coaching)</td>
+                        <td class="border border-black p-[1%] text-center hover:bg-gray-200 dark:hover:bg-gray-700">2:00 PM</td>
+                        <td class="border border-black p-[1%] text-center hover:bg-gray-200 dark:hover:bg-gray-700">5:00 PM</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </article>
+
+    <article id="extras"
+        class="w-[80vw] h-[90vh] justify-self-center shadow-black shadow-xl flex flex-col justify-between items-center rounded-4xl transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 dark:bg-gray-950">
+        <h2 class="sm:text-base max-sm:text-xs font-serif font-bold bg-black text-white sm:w-[30%] max-sm:w-full p-[2%] text-center sm:rounded-b-4xl max-sm:rounded-t-4xl">Every couch at
+            Five Star Power Gym is chosen for one reason - to get you results real, lasting visible
+            results</h2>
+        <ul class="list-disc list-inside font-serif sm:text-base max-sm:text-sm">
+            <li>Fat lose</li>
+            <li>Weigh gain</li>
+            <li>Female fitness</li>
+            <li>Cardio session</li>
+            <li>Strength training</li>
+            <li>HIIT & Function training</li>
+            <li>Fitness with nutrition Plans</li>
+            <li>Mobility</li>
+            <li>CTA</li>
+        </ul>
+        <h2 class="font-serif sm:text-base max-sm:text-xs font-bold bg-black text-white sm:w-[30%] max-sm:w-full p-[2%] text-center sm:rounded-t-4xl max-sm:rounded-b-4xl">Don't know which
+            couch is right for you?
+            Let us match you with the perfect trainer based on goal.</h2>
+    </article>
+
+    <article id="location-details"
+        class="w-[40vw] h-[30vh] shadow-black shadow-xl justify-self-center justify-items-center rounded-t-4xl transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 dark:bg-gray-950">
+        <h2 class="font-serif font-bold bg-black text-white sm:w-[30%] max-sm:w-full p-[2%] text-center sm:text-base max-sm:text-xs sm:rounded-b-4xl max-sm:rounded-t-4xl">
+            Location</h2>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3405.213312201985!2d73.06362517474822!3d31.408248474265434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3922430058712e9d%3A0x8cdea4bb0850e3a0!2sFIVE%20STAR%20POWER%20GYM!5e0!3m2!1sen!2s!4v1752311369572!5m2!1sen!2s"
+            width="50%" height="70%" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            class="rounded-4xl"></iframe>
+    </article>
+</body>
+<script src="./script.js"></script>
+
+</html>
